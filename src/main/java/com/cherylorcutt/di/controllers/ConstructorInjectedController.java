@@ -1,6 +1,7 @@
 package com.cherylorcutt.di.controllers;
 
 import com.cherylorcutt.di.services.GreetingService;
+import org.springframework.stereotype.Controller;
 
 /**
  * {@code @author:}  corcutt
@@ -9,6 +10,7 @@ import com.cherylorcutt.di.services.GreetingService;
  * This mimics what spring would do.
  * Can add assertion to verify no null property passed in.
  **/
+@Controller // this is a spring-managed component
 public class ConstructorInjectedController {
   private final GreetingService greetingService;
 
