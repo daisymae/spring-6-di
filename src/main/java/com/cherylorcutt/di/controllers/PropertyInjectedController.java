@@ -12,7 +12,7 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller // spring doesn't know what to do with this -- needs @Autowired
 public class PropertyInjectedController {
-  @Qualifier("greetingServicePropertyInjected")
+  @Qualifier("propertyGreetingService")
   @Autowired // not recommended
   GreetingService greetingService;
 
