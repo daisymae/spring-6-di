@@ -2,6 +2,7 @@ package com.cherylorcutt.di.controllers;
 
 import com.cherylorcutt.di.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -14,6 +15,7 @@ public class SetterInjectionController {
   // putting @Autowired on the property will cause reflection to be used which is not performant
   private GreetingService greetingService;
 
+  @Qualifier("setterGreetingBean")
   @Autowired
   public void setGreetingService(GreetingService greetingService) {
     System.out.println("SetterInjectedController.setGreetingService");
