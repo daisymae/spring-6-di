@@ -2,6 +2,7 @@ package com.cherylorcutt.di.controllers;
 
 import com.cherylorcutt.di.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller // spring doesn't know what to do with this -- needs @Autowired
 public class PropertyInjectedController {
+  @Qualifier("greetingServicePropertyInjected")
   @Autowired // not recommended
   GreetingService greetingService;
 
