@@ -1,22 +1,25 @@
-package com.cherylorcutt.di.controllers.i18n;
+package com.cherylorcutt.di.controllers.datasource;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 /**
  * {@code @author:}  corcutt
  * {@code @created:} 3/9/2025
  **/
-@ActiveProfiles({"EN", "dev"})
+@ActiveProfiles({"prod", "EN"})
 @SpringBootTest
-public class MyI18nControllerENTest {
+class DatasourceControllerTest {
+
   @Autowired
-  MyI18nController myI18nController;
+  DatasourceController controller;
 
   @Test
-  void sayHello() {
-    System.out.println(myI18nController.sayHello());
+  void getDatasource() {
+    System.out.println(controller.getDatasource());
   }
 }

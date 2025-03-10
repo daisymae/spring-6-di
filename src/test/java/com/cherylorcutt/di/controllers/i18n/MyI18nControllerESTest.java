@@ -9,7 +9,7 @@ import org.springframework.test.context.ActiveProfiles;
  * {@code @author:}  corcutt
  * {@code @created:} 3/9/2025
  **/
-@ActiveProfiles("ES")
+@ActiveProfiles({"ES", "dev"})
 @SpringBootTest
 public class MyI18nControllerESTest {
 
